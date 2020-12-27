@@ -19,52 +19,20 @@
 
 
 function anagrams(word, words) {
-  console.log(word)
-  console.log(words)
 
-
-  const wordAsArray = word.split('')
   const returnedArray = []
 
   for (let i = 0; i < words.length; i++) {
-    const check = words[i].split('')
-    // console.log(wordAsArray.sort().join('') == check.sort().join(''))
-    // console.log(wordAsArray.sort().join(''))
 
-
-    if (wordAsArray.sort().join('') == check.sort().join('')) {
+    if (word.split('').sort().join('') == words[i].split('').sort().join('')) {
 
       returnedArray.push(words[i])
-
-      // firstValue !== undefined ? secondValue = words[i] : firstValue = words[i]
-
-
-      console.log(words[i])
-      // console.log(words[i].split('').reverse().join(''))
-
-      // words[i] == words[i].reverse()
-
+      // console.log(words[i])
     }
-    // console.log(wordAsArray)
-    // console.log(check)
   }
-
-  // console.log(firstValue && secondValue ? [firstValue, secondValue] : [])
-
-  // console.log(firstValue)
-  // console.log(secondValue)
-  // return firstValue && secondValue && firstValue.split('') == secondValue.split('').reverse() ? [firstValue, secondValue] : []
-
-  console.log(returnedArray);
+  // console.log(returnedArray);
 
   return returnedArray
-
-
-
-  // console.log(words.includes(wordAnagram))
-  // console.log([wordAnagram, word]);
-
-
 }
 
 anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada'])
